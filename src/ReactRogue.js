@@ -15,9 +15,24 @@ const ReactRogue = ({ width, height, tilesize }) => {
     console.log(`handle input: ${action}:${JSON.stringify(data)}`);
     let newWorld = new World();
     Object.assign(newWorld, world);
-    newWorld.movePlayer(data.x, data.y);
-    newWorld.moveMonster(data.x, data.y);
-    setworld(newWorld);
+
+    switch (action) {
+      case "move":
+        newWorld.movePlayer(data.x, data.y);
+        newWorld.moveMonster(data.x, data.y);
+        setworld(newWorld);
+
+        break;
+      case "drinkHealthPotion":
+        newWorld.playerDrinkPoition();
+
+        world.addToHistory("You drink a health potion");
+
+        break;
+      default:
+        console.log(`Unknown action ${action}`);
+        break;
+    }
   };
 
   useEffect(() => {

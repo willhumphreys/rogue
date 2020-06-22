@@ -62,9 +62,17 @@ class World {
         let tempMonster = monster.copyMonster();
         tempMonster.move(dx * -1, dy * -1);
 
+        let entity = this.getEntityAtLocation(tempMonster.x, tempMonster.y);
+
+        if (entity) {
+          console.log(entity);
+          entity.action("bump", this);
+          return;
+        }
+
         if (this.isWall(tempMonster.x, tempMonster.y)) {
           console.log(
-            `${tempMonster.name} blocked at ${tempMonster.x}:${tempMonster.y}`
+            `${tempMonster.attributes.name} blocked at ${tempMonster.x}:${tempMonster.y}`
           );
         } else {
           monster.move(dx * -1, dy * -1);
@@ -89,6 +97,10 @@ class World {
     } else {
       this.player.move(dx, dy);
     }
+  }
+
+  playerDrinkPoition() {
+    this.player.attributes.health = this.player.attributes.health + 10;
   }
 
   createCellularMap() {

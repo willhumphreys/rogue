@@ -7,8 +7,10 @@ class Loot extends Entity {
       world.player.add(this);
       world.remove(this);
     }
+
     if (verb === "drop") {
       console.log("drop", this);
+      world.player.remove(this);
     }
   }
 }

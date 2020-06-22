@@ -19,6 +19,12 @@ class Player extends Entity {
     this.inventory.push(item);
   }
 
+  remove(item) {
+    this.inventory = this.inventory.filter(
+      (inventoryItem) => inventoryItem.name !== item.name
+    );
+  }
+
   copyPlayer() {
     let newPlayer = new Player();
     Object.assign(newPlayer, this);
