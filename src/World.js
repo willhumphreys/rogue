@@ -58,7 +58,17 @@ class World {
       })
       .forEach((monster) => {
         console.log(`Move monster ${monster.attributes.name}`);
-        monster.move(dx * -1, dy * -1);
+
+        let tempMonster = monster.copyMonster();
+        tempMonster.move(dx * -1, dy * -1);
+
+        if (this.isWall(tempMonster.x, tempMonster.y)) {
+          console.log(
+            `${tempMonster.name} blocked at ${tempMonster.x}:${tempMonster.y}`
+          );
+        } else {
+          monster.move(dx * -1, dy * -1);
+        }
       });
   }
 

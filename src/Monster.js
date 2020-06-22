@@ -30,6 +30,12 @@ class Monster extends Entity {
     this.x += dx;
     this.y += dy;
   }
+
+  copyMonster() {
+    let newMonster = new Monster();
+    Object.assign(newMonster, this);
+    return newMonster;
+  }
 }
 
 export default Monster;
