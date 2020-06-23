@@ -1,6 +1,7 @@
 import Loot from "./Loot";
 import Monster from "./Monster";
 import Stairs from "./Stairs";
+import monsters from "./monsters.json";
 
 const lootTable = [
   {
@@ -29,22 +30,31 @@ const lootTable = [
   },
 ];
 
-const monsterTable = [
-  {
-    name: "Ogre",
-    color: "lightgray",
-    ascii: "0",
-    offset: { x: 2, y: 3 },
-    health: 6,
-  },
-  {
-    name: "Kobold",
-    color: "green",
-    ascii: "k",
-    offset: { x: 4, y: 3 },
-    health: 3,
-  },
-];
+const monsterTable = monsters.map((monster) => {
+  monster.ascii = monster.Name.substr(0, 1);
+  monster.name = monster.Name;
+  monster.offset = { x: 2, y: 3 };
+  monster.color = "lightgray";
+  monster.health = 6;
+  return monster;
+});
+
+// const monsterTable = [
+//   {
+//     name: "Ogre",
+//     color: "lightgray",
+//     ascii: "0",
+//     offset: { x: 2, y: 3 },
+//     health: 6,
+//   },
+//   {
+//     name: "Kobold",
+//     color: "green",
+//     ascii: "k",
+//     offset: { x: 4, y: 3 },
+//     health: 3,
+//   },
+// ];
 
 class Spawner {
   constructor(world) {
