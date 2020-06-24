@@ -2,6 +2,7 @@ import Loot from "./Loot";
 import Monster from "./Monster";
 import Stairs from "./Stairs";
 import monsters from "./monsters.json";
+import { rollDice } from "./DiceRoller";
 
 const lootTable = [
   {
@@ -31,11 +32,10 @@ const lootTable = [
 ];
 
 const monsterTable = monsters.map((monster) => {
-  monster.ascii = monster.Name.substr(0, 1);
-  monster.name = monster.Name;
+  monster.ascii = monster.name.substr(0, 1);
   monster.offset = { x: 2, y: 3 };
-  monster.color = "lightgray";
-  monster.health = 6;
+  monster.health =
+    typeof monster.hp === "string" ? rollDice(monster.hp) : monster.hp;
   return monster;
 });
 
