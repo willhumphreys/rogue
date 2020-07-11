@@ -25,8 +25,13 @@ const ReactRogue = ({ width, height, tilesize }) => {
         break;
       case "use":
         if (data === "health potion") {
-          world.addToHistory("You drink a health potion");
+          if (newWorld.playerUsesItem(data)) {
+            newWorld.addToHistory("You drink a health potion");
+          } else {
+            newWorld.addToHistory("You have no health potion to drink");
+          }
         }
+        setworld(newWorld);
 
         break;
       default:

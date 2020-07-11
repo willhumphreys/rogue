@@ -15,7 +15,7 @@ class Loot extends Entity {
     if (verb === "use") {
       console.log("use", this);
       world.addToHistory(`hey hey`);
-      world.player.remove(this);
+      world.player.use(this);
     }
   }
 }

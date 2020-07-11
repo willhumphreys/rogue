@@ -99,6 +99,10 @@ class World {
     }
   }
 
+  playerUsesItem(data) {
+    return this.player.use(data);
+  }
+
   playerDrinkPoition() {
     // const index = this.player.inventory.indexOf(item);
     // if (index !== -1) {

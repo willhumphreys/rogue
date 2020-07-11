@@ -30,6 +30,19 @@ class Player extends Entity {
     );
   }
 
+  use(item) {
+    console.log(`Lets use ${item}`);
+
+    const healthPotionPosition = this.inventory.findIndex(
+      (el) => el.attributes.name === "Health Potion"
+    );
+    if (healthPotionPosition !== -1) {
+      this.inventory.splice(healthPotionPosition, 1);
+      return true;
+    }
+    return false;
+  }
+
   copyPlayer() {
     let newPlayer = new Player();
     Object.assign(newPlayer, this);
