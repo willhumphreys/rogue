@@ -9,7 +9,7 @@
     "damage": "0d0/0d0",
     "range": "Rusts armor",
     "notes": "",
-    "color": "lightgrey"
+    "color": "blue"
   },
   {
     "name": "Bat",
@@ -21,7 +21,7 @@
     "damage": "1d2",
     "range": "Flies randomly",
     "notes": "",
-    "color": "lightgrey"
+    "color": "black"
   },
   {
     "name": "Centaur",
@@ -33,7 +33,7 @@
     "damage": "",
     "range": "",
     "notes": "",
-    "color": "lightgrey"
+    "color": "brown"
   },
   {
     "name": "Dragon",
@@ -45,7 +45,7 @@
     "damage": "1d8/1d8/3d10",
     "range": "ranged 6d6 flame attack",
     "notes": "",
-    "color": "lightgrey"
+    "color": "red"
   },
   {
     "name": "Emu",
@@ -57,7 +57,7 @@
     "damage": "1d2",
     "range": "",
     "notes": "",
-    "color": "lightgrey"
+    "color": "blue"
   },
   {
     "name": "Venus Flytrap",
@@ -69,7 +69,7 @@
     "damage": "special*",
     "range": "Traps player",
     "notes": "",
-    "color": "lightgrey"
+    "color": "green"
   },
   {
     "name": "Griffin",
@@ -81,7 +81,7 @@
     "damage": "4d3/3d5",
     "range": "",
     "notes": "",
-    "color": "lightgrey"
+    "color": "yellow"
   },
   {
     "name": "Hobgoblin",
@@ -93,7 +93,7 @@
     "damage": "1d8",
     "range": "",
     "notes": "",
-    "color": "lightgrey"
+    "color": "orange"
   },
   {
     "name": "Ice monster",
@@ -105,7 +105,7 @@
     "damage": "Freezes player",
     "range": "",
     "notes": "",
-    "color": "lightgrey"
+    "color": "lightblue"
   },
   {
     "name": "Jabberwock",
@@ -117,7 +117,7 @@
     "damage": "",
     "range": "",
     "notes": "",
-    "color": "lightgrey"
+    "color": "brown"
   },
   {
     "name": "Kestrel",
@@ -129,7 +129,7 @@
     "damage": "1d4",
     "range": "",
     "notes": "",
-    "color": "lightgrey"
+    "color": "brown"
   },
   {
     "name": "Leprechaun",
@@ -141,7 +141,7 @@
     "damage": "Steals gold",
     "range": "",
     "notes": "",
-    "color": "lightgrey"
+    "color": "green"
   },
   {
     "name": "Medusa",
@@ -165,7 +165,7 @@
     "damage": "Steals magic item",
     "range": "",
     "notes": "",
-    "color": "lightgrey"
+    "color": "pink"
   },
   {
     "name": "Orc",
@@ -177,7 +177,7 @@
     "damage": "1d8",
     "range": "Greedy - runs toward gold",
     "notes": "",
-    "color": "lightgrey"
+    "color": "darkgreen"
   },
   {
     "name": "Phantom",
@@ -189,7 +189,7 @@
     "damage": "4d4",
     "range": "Invisible",
     "notes": "",
-    "color": "lightgrey"
+    "color": "black"
   },
   {
     "name": "Quagga",
@@ -213,7 +213,7 @@
     "damage": "1d6",
     "range": "Reduces Strength",
     "notes": "",
-    "color": "lightgrey"
+    "color": "lightbrown"
   },
   {
     "name": "Snake",
@@ -225,7 +225,7 @@
     "damage": "1d3",
     "range": "",
     "notes": "",
-    "color": "lightgrey"
+    "color": "yellow"
   },
   {
     "name": "Troll",
@@ -237,7 +237,7 @@
     "damage": "1d8/1d8/2d6",
     "range": "",
     "notes": "",
-    "color": "lightgrey"
+    "color": "lightgreen"
   },
   {
     "name": "Ur-vile",
@@ -249,7 +249,7 @@
     "damage": "1d9/1d9/2d9",
     "range": "",
     "notes": "",
-    "color": "lightgrey"
+    "color": "darkgrey"
   },
   {
     "name": "Vampire",
@@ -261,7 +261,7 @@
     "damage": "1d10",
     "range": "Drains Max hp",
     "notes": "",
-    "color": "lightgrey"
+    "color": "black"
   },
   {
     "name": "Wraith",
@@ -309,6 +309,6 @@
     "damage": "1d8",
     "range": "",
     "notes": "",
-    "color": "lightgrey"
+    "color": "darkgrey"
   }
 ]

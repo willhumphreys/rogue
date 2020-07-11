@@ -1,3 +1,5 @@
+const H_KEY = 72;
+
 class InputManager {
   observers = [];
 
@@ -28,8 +30,8 @@ class InputManager {
       case 40:
         this.broadcast("move", { x: 0, y: 1 });
         break;
-      case 72:
-        this.broadcast("drinkHealthPotion");
+      case H_KEY:
+        this.broadcast("use", "health potion");
         break;
       default:
         break;

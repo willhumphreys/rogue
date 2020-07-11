@@ -7,6 +7,11 @@ class Player extends Entity {
     name: "Player",
     ascii: "@",
     health: 10,
+    strength: 16,
+    gold: 0,
+    armor: 0,
+    exp: 0,
+    level: 1,
   };
 
   move(dx, dy) {

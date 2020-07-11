@@ -39,23 +39,6 @@ const monsterTable = monsters.map((monster) => {
   return monster;
 });
 
-// const monsterTable = [
-//   {
-//     name: "Ogre",
-//     color: "lightgray",
-//     ascii: "0",
-//     offset: { x: 2, y: 3 },
-//     health: 6,
-//   },
-//   {
-//     name: "Kobold",
-//     color: "green",
-//     ascii: "k",
-//     offset: { x: 4, y: 3 },
-//     health: 3,
-//   },
-// ];
-
 class Spawner {
   constructor(world) {
     this.world = world;

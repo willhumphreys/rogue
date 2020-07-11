@@ -100,7 +100,11 @@ class World {
   }
 
   playerDrinkPoition() {
-    this.player.attributes.health = this.player.attributes.health + 10;
+    // const index = this.player.inventory.indexOf(item);
+    // if (index !== -1) {
+    //   this.player.inventory.splice(index, 1);
+    //   this.player.attributes.health = this.player.attributes.health + 10;
+    // }
   }
 
   createCellularMap() {

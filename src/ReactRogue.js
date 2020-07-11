@@ -23,10 +23,10 @@ const ReactRogue = ({ width, height, tilesize }) => {
         setworld(newWorld);
 
         break;
-      case "drinkHealthPotion":
-        newWorld.playerDrinkPoition();
-
-        world.addToHistory("You drink a health potion");
+      case "use":
+        if (data === "health potion") {
+          world.addToHistory("You drink a health potion");
+        }
 
         break;
       default:
@@ -75,12 +75,42 @@ const ReactRogue = ({ width, height, tilesize }) => {
         height={height * tilesize}
         style={{ border: "1px solid black", background: "Dimgray" }}
       ></canvas>
+      <KeyboardShortcuts />
+      <Inventory world={world} />
+      <History world={world} />
+    </>
+  );
+};
+
+const KeyboardShortcuts = () => {
+  return (
+    <>
+      <h4>Keyboard Shortcuts</h4>
+      <ul>
+        <li>Move player: Arrow keys</li>
+        <li>Drink health potion: H</li>
+      </ul>
+    </>
+  );
+};
+
+const Inventory = ({ world }) => {
+  return (
+    <>
+      <h4>Inventory</h4>
       <ul>
         {world.player.inventory.map((item, index) => (
           <li key={index}>{item.attributes.name}</li>
         ))}
       </ul>
+    </>
+  );
+};
 
+const History = ({ world }) => {
+  return (
+    <>
+      <h4>History</h4>
       <ul>
         {world.history.map((item, index) => (
           <li key={index}>{item}</li>
